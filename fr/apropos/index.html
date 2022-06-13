@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet" href="/slideshow.css">
+<script>
+  var slide = new Array('/f1.jpg','/f2.jpg','/f3.jpg', '/f4.jpg' );
+var numero = 0;
+var strLienAOuvrir="/fr"
+function ChangeSlide(sens) {
+
+    numero = numero + sens;
+    if (numero < 0)
+        numero = slide.length - 1;
+    if (numero > slide.length - 1)
+        numero = 0;
+        document.getElementById("slide").src = slide[numero];
+        document.getElementById("slide2").src = slide[numero];
+
+switch (numero) {
+      case 1:
+      document.getElementById("t1").innerText = 'A propos';
+      document.getElementById("test").style.visibility = "visible";
+      strLienAOuvrir="/fr/apropos";
+
+        break;
+        case 2:
+      document.getElementById("t1").innerText = 'Produits'
+      document.getElementById("test").style.visibility = "hidden";
+      strLienAOuvrir="/fr/produits";
+
+
+        break;
+        case 3:
+      document.getElementById("t1").innerText = 'Projets'
+      strLienAOuvrir="/fr/projets";
+
+        break;
+        case 4:
+      document.getElementById("t1").innerText = 'Bienvenue !'
+
+        break;
+    
+      default:
+      document.getElementById("t1").innerText = 'Bienvenue !'
+
+        break;}}
+         
+setInterval("ChangeSlide(1)", 15000);
+
+</script>
+<style>
+#rt-logo {background: url(sacologo2new2.png) 50% 0 no-repeat !important;}
+
+.dropbtn {
+  display:inline-block;
+    padding:10px;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px 15px 0px 0px;
+color: #ae171c;
+    border-radius: 15px 15px 0px 0px;
+background: #5959593e;
+}
+
+ul.dots li {
+    background-image: url(../images/overlays/light/dots.png);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #00000099;
+  border-radius: 0 20px 20px 20px;
+  min-width: fit-content;
+  box-shadow: 0px 8px 16px 0px lightblue;
+  z-index: 1;
+  
+}
+
+.fondimage{
+  filter: blur(8px), brightness(70%);
+  -webkit-filter:  blur(8px) brightness(60%);
+}
+
+.dropdown-content a:hover {}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {color:whitesmoke ;
+
+text-shadow: 1px 1px #000080;   
+border-radius: 15px 15px 0px 0px;
+background: #01010180;}
+
+body {
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.noselect { 
+       -webkit-touch-callout: none;
+       -webkit-user-select: none;
+       -khtml-user-select: none;
+       -moz-user-select: none;
+       -ms-user-select: none;
+        user-select: none;
+    } 
+
+
+    .fullDiv {
+    height:auto;
+    width: 100%;
+  left: 0;
+    position: absolute;
+    border-top: 2px #00000080 solid;
+}
+
+.nav{
+    list-style:none;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding:0;
+    text-align:center;
+}
+.nav li{
+    display:inline;
+
+}
+.navv{
+  display: none;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+    text-decoration: none;
+    color: #ae171c;
+    border-radius: 15px 15px 0px 0px;
+background: #5959593e;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav a:hover {
+    color: aliceblue;
+    text-shadow: 1px 1px #000080;   
+border-radius: 15px 15px 0px 0px;
+background: #01010180}
+
+  .active a{
+    border-top: 2px #D0232A80 solid; border-left: 2px #D0232A80 solid; border-right: 2px #D0232A80 solid;
+  }
+.none a{
+  background: none;
+}
+  .none a:hover {
+  color: lightyellow;
+  text-shadow: none;   
+  background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,0) 40%, #D0232A80 100%);
+   border-radius: 15px;
+
+}
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+.dropdown-content a {
+  color: whitesmoke;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  margin: 5px;
+  min-width:250px;
+}
+
+@media screen and (max-width: 919px) {
+  .nav1{
+    display: none;
+  }
+  .nav2{
+    display: block;
+  }
+}
+mark {
+  background-color: #ffffff80;
+  color: black;
+  border-radius: 5px;
+  padding:2px ;
+}
+
+</style>
+
+<head >
+  <title>À propos de Saco Controls Inc.</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <IMG SRC="/bienvenue.gif" style="z-index: -1; filter:opacity(50%); position: fixed;  left: 0; top: 0; margin: 0; padding: 0; min-width: 100%; min-height: 100%; overflow:hidden;">
+
+    <a href="/fr"><img src="/sacologo2new1.png" alt="Girl in a jacket" width="10%" height="10%" style="float: left ; padding-left: 20px; margin-top: -10px;padding-bottom: 5px;" class="noselect" >  </a>
+      <div class="noselect">
+     
+        <p class="noselect" style="text-align: right; color: black; font-weight: bolder; padding-right: 2%;"><mark>Sélectionner la langue souhaitée :</mark>&nbsp; &nbsp;</p>
+        <div  style="display: block; padding-right: 10%;  margin: auto; margin-top: -10px; margin-bottom: 0px; float: right; ">
+      <a href="/fr" style="display: inline-block; border: 0.5px solid greenyellow; border-radius: 100%"><img src="/fr.png" title="Francais"  width="30px" height="30px" >  </a>
+    <a href="/es" style="display: inline-block; border: 0.5px solid darkblue; border-radius: 100%"><img src="/es.png" title="Español" width="30px" height="30px"  >  </a>
+    <a href="/en" style="display: inline-block; border: 0.5px solid darkblue; border-radius: 100%"><img src="/en.png" title="English" width="30px" height="30px"  >  </a>
+    <br>
+    <br>
+  </div>
+      </div>     
+      
+    
+
+
+<div id="Topnav">
+  
+    <ul class="nav nav1 noselect" style="font-weight:bolder;">
+        <li  ><a href="/fr"><i class="fa fa-home"></i></a></li>
+        <li class="active"><a href="Apropos" >À propos</a></li>
+
+        <li>
+          <div class="dropdown" style="font-family: FreeMono, monospace, sans-serif;">
+            <button class="dropbtn " style=" font-size: inherit; font-weight:inherit ;">Projets<span style="font-size: small;">&#11167;</span></button>
+            <div class="dropdown-content none box">
+              <a href="#">Introduction</a>
+              <a href="#">Hydro Power Mosaic Panel</a>
+              <a href="#">MMP Traitement de l'eau</a>
+              <a href="#">Marine Applications</a>
+            </div>
+          </div>
+         </li>
+         <li>
+          <div class="dropdown" style="font-family: FreeMono, monospace, sans-serif;">
+            <button class="dropbtn" style=" font-size: inherit; font-weight:inherit; ">Produits<span style="font-size: small;">&#11167;</span></button>
+            <div class="dropdown-content none box">
+              <a href="#">Commutateurs de contrôle</a>
+              <a href="#">DEL</a>
+              <a href="#">Mosaic Tile</a>
+              <a href="#"> Mètres </a>
+              <a href="#"> Câblages </a>
+              <a href="#"> Systèmes d'alarme </a>
+              <a href="#"> Panneaux de contrôle </a>
+              <a href="#"> Afficheurs </a>
+              <a href="#"> Gravure </a>
+              <a href="#"> Grille sur mesure </a>
+
+            </div>
+          </div>
+         </li>
+        <li><a href="#about">Manuels</a></li>
+        <li>
+          <div class="dropdown" style="font-family: FreeMono, monospace, sans-serif;">
+            <button class="dropbtn " style=" font-size: inherit; font-weight:inherit;">Ventes<span style="font-size: small;">&#11167;</span></button>
+            <div class="dropdown-content none box">
+              <a href="#">DDS</a>
+              
+            </div>
+          </div>
+         </li>        <li><a href="#about">Assurance Qualité</a></li>
+        <li><a href="#about">Contact</a></li>
+        
+
+      </ul>
+      
+      <ul class="nav2 navv" style="font-weight:bolder;">
+        <li  ><a href="/fr"><i class="fa fa-home"></i></a></li>
+        <li class="active"><a href="Apropos" >À propos</a></li>
+
+        <li>
+          <div class="dropdown" style="font-family: FreeMono, monospace, sans-serif;">
+            <button class="dropbtn " style=" font-size: inherit; font-weight:inherit ;">Projets<span style="font-size: small;">&#11167;</span></button>
+            <div class="dropdown-content none box">
+              <a href="#">Introduction</a>
+              <a href="#">Hydro Power Mosaic Panel</a>
+              <a href="#">MMP Traitement de l'eau</a>
+              <a href="#">Marine Applications</a>
+            </div>
+          </div>
+         </li>
+         <li>
+          <div class="dropdown" style="font-family: FreeMono, monospace, sans-serif;">
+            <button class="dropbtn" style=" font-size: inherit; font-weight:inherit; ">Produits<span style="font-size: small;">&#11167;</span></button>
+            <div class="dropdown-content none box">
+              <a href="#">Commutateurs de contrôle</a>
+              <a href="#">DEL</a>
+              <a href="#">Mosaic Tile</a>
+              <a href="#"> Mètres </a>
+              <a href="#"> Câblages </a>
+              <a href="#"> Systèmes d'alarme </a>
+              <a href="#"> Panneaux de contrôle </a>
+              <a href="#"> Afficheurs </a>
+              <a href="#"> Gravure </a>
+              <a href="#"> Grille sur mesure </a>
+
+            </div>
+          </div>
+         </li>
+        <li><a href="#about">Manuels</a></li>
+        <li>
+          <div class="dropdown" style="font-family: FreeMono, monospace, sans-serif;">
+            <button class="dropbtn " style=" font-size: inherit; font-weight:inherit;">Ventes<span style="font-size: small;">&#11167;</span></button>
+            <div class="dropdown-content none box">
+              <a href="#">DDS</a>
+              
+            </div>
+          </div>
+         </li>        <li><a href="#about">Assurance Qualité</a></li>
+        <li><a href="#about">Contact</a></li>
+        
+
+      </ul>
+    </div >
+
+  </head>
+  <body style="background:#00006130" onload="currentSlide(1)"></body>
+  
+    <div class="fullDiv noselect" style="margin: 0px; margin-top: -16px; padding-top: -5; z-index: 0; background: #5959593e;">
+    </br>
+  
+<div id="slider"  style="width: 90%; height: 300px; overflow: hidden; border-radius: 20px;">
+  <img src="/f1.jpg" alt="La forêt de peupliers" id="slide" title="En Savoir Plus"  style="height: 100% ; box-shadow: 0px 0px 30px black; " onclick="window.open(strLienAOuvrir);">
+  <div id="precedent" onclick="ChangeSlide(-1)">&#8610;</div>
+  <div id="suivant" onclick="ChangeSlide(1)">&#8611;</div>
+  <div id="t1" >Bienvenue !</div>
+    <img src="/f1.jpg" alt="La forêt de peupliers" id="slide2" class="fondimage" style="width:100%;position: absolute; z-index: -1;  ">
+
+</div>
+</br>
+<div id="test" style="visibility: hidden; text-align: center;">allo</div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+    </br>
+    </br>
+    </br>
+    
+    </br>
+  </br>
+    </br>
+  </br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>&#11161;
+</br><a href="#" style="text-align:center ; margin-left: 50%; vertical-align: middle; margin-right: auto; color: aliceblue; text-decoration: none; border: aliceblue 1.5px double; padding: 2px; border-radius: 2px; ">TOP &#11161;</a>
+</br>
+</br>
+</br>
+</body>
+    </html>
+    
